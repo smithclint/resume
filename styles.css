@@ -19,7 +19,7 @@ header {
 
 .header-content {
   display: flex;
-  align-items: left;
+  align-items: center;
   justify-content: center;
   max-width: 900px;
   margin: 0 auto;
@@ -29,10 +29,13 @@ header .headshot {
   flex: 1;
 }
 header .headshot img {
-  /* border-radius: 50%; */
-  width: 150px;
-  height: 150px;
-  margin-right: 2rem;
+    width: 100%;         /* Makes the image responsive */
+    aspect-ratio: 1 / 1; /* Locks to a square aspect ratio (1:1) */
+    object-fit: cover;   /* Ensures the image fills the area */
+    border-radius: 5%;  /* Optional: Makes it circular */
+    border-color: white;
+    border: 15px solid;
+    border-bottom: 45px solid;
 }
 header .details {
   flex: 2;
