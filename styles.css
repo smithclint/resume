@@ -1,92 +1,101 @@
 body {
-    font-family: 'Deja Vu Sans', 'Nanum Gothic', 'HanaA', 'HanaB', 'Noto Sans', 'TH Sarabun New', 'Unifont', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
+  font-family: "Deja Vu Sans", "Nanum Gothic", "HanaA", "HanaB", "Noto Sans",
+    "TH Sarabun New", "Unifont", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
 }
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
 }
 header .headshot {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #fff;
-    margin-right: 1rem;
-    overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 1rem;
+  overflow: hidden;
 }
 header .headshot img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 header .details {
-    text-align: left;
+  text-align: left;
 }
 header h1 {
-    font-size: 2rem;
-    margin: 0;
+  font-size: 2rem;
+  margin: 0;
 }
 header h2 {
-    font-size: 1.2rem;
-    font-weight: 300;
-    margin: 0;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0;
 }
 .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 section {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 .section-title {
-    font-size: 1.5rem;
-    border-bottom: 2px solid #ccc;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    color: #555;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  color: #555;
 }
 .entry {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .entry h3 {
-    font-size: 1.2rem;
-    margin: 0;
-    color: #333;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
 }
 .entry span {
-    font-size: 0.9rem;
-    color: #777;
+  font-size: 0.9rem;
+  color: #777;
 }
 .entry p {
-    margin: 0.5rem 0 0;
+  margin: 0.5rem 0 0;
 }
 .panel {
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    border-radius: 6px;
-    background-color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-    font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.9rem;
 }
 a {
-    color: #1a73e8;
-    text-decoration: none;
+  color: #1a73e8;
+  text-decoration: none;
 }
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.entry-subtitle {
+  font-weight: 550;
+}
