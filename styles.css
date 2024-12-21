@@ -1,33 +1,40 @@
+
+
 body {
   font-family: "Deja Vu Sans", "Nanum Gothic", "HanaA", "HanaB", "Noto Sans",
     "TH Sarabun New", "Unifont", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
   color: #333;
   line-height: 1.6;
 }
+
 header {
-  background-color: #333;
+  background-color: #393434;
   color: #fff;
-  padding: 1rem;
+  padding: 2rem 0; /* Increase padding to make the header taller */
+  min-height: 200px; /* Set a minimum height for the header */
+}
+
+.header-content {
   display: flex;
-  align-items: center;
+  align-items: left;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 header .headshot {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #fff;
-  margin-right: 1rem;
-  overflow: hidden;
+  flex: 1;
 }
 header .headshot img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  /* border-radius: 50%; */
+  width: 150px;
+  height: 150px;
+  margin-right: 2rem;
 }
 header .details {
+  flex: 2;
   text-align: left;
 }
 header h1 {
@@ -99,3 +106,28 @@ a:hover {
 .entry-subtitle {
   font-weight: 550;
 }
+.signature {
+  font-family: "Mrs Saint Delafield", serif;
+  font-size: 5rem;
+  color: #fff;
+  text-align: center;
+  /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);  */
+}
+.title{
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #9e9e9e;
+}
+
+@media (max-width: 768px) {
+  .signature {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signature {
+    font-size: 2rem;
+  }
+}
+
