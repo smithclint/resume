@@ -19,6 +19,8 @@ header {
 
 .header-content {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   max-width: 900px;
@@ -34,13 +36,23 @@ header .headshot img {
     object-fit: cover;   /* Ensures the image fills the area */
     border-radius: 1%;  /* Optional: Makes it circular */
     border-color: white;
-    border: 15px solid;
-    border-bottom: 45px solid;
+    border: 0.5rem solid;
+    border-bottom: 1rem solid;
 }
 header .details {
   flex: 2;
-  text-align: left;
+  display: flex;
+  justify-content: left; /* Centers the logo horizontally */
+  align-items: center; /* Centers the logo vertically */
+  text-align: center;
 }
+
+.logo {
+  max-width: 100%; /* Ensures the logo scales responsively */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 150px; /* Optional: Limits the logo height */
+}
+
 header h1 {
   font-size: 2rem;
   margin: 0;
@@ -110,28 +122,34 @@ a:hover {
 .entry-subtitle {
   font-weight: 550;
 }
-.signature {
-  font-family: "Mrs Saint Delafield", serif;
-  font-size: 5rem;
-  color: #fdfdfa;
-  text-align: center;
-  /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);  */
-}
-.title{
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #c3dbd6;
-}
 
 @media (max-width: 768px) {
-  .signature {
-    font-size: 2.5rem;
+  .header-content {
+    flex-direction: column; /* Stack the elements vertically */
+    text-align: center; /* Center align the text */
+    align-items: center; /* Ensures items stay visible and centered */
+  }
+
+  .details {
+    margin-bottom: 1rem; /* Add spacing below the logo */
+  }
+
+  .logo {
+    width: 120px; /* Adjust the size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    fill: #fdfdfa; /* Ensure the color remains correct */
+  }
+
+  .headshot img {
+    max-width: 70%; /* Adjust image size */
+    margin-top: 1rem; /* Add spacing above the headshot */
   }
 }
+
+
 
 @media (max-width: 480px) {
-  .signature {
-    font-size: 2rem;
+  .headshot img {
+    max-width: 50%; /* Further restrict image size */
   }
 }
-
