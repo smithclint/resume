@@ -23,7 +23,7 @@
       </div>
     </div>
   </header>
-  
+
 
   <div class="container">
     <section class="flex-row">
@@ -75,76 +75,139 @@
           <h3>Sr. Backend Engineer</h3>
           <span>Included Health (formerly Doctor On Demand) - San Francisco, CA |
             October 2017 to November 2024</span>
-          <p class="entry-subtitle">
-            🌟 Practice Management Engineering Team
-          </p>
+          <p class="entry-subtitle">🌟 Practice Management Engineering Team</p>
           <p>
             Worked on the Practice Management engineering team to transition
             from legacy technology to a modern, microservice-oriented
-            architecture. This project replaced an outdated in-house EHR with
-            a third-party system, enabling integration and greater flexibility
-            for future innovation.
+            architecture. This project replaced an outdated in-house EHR
+            (Electronic Health Record) with a third-party system, enabling
+            integration and greater flexibility for future innovation.
           </p>
           <ul>
             <li>
-              Designed and built Golang microservices to support core
-              functionalities, such as appointment booking and patient
-              creation.
+              Developed and maintained <strong>Golang microservices</strong> to streamline practitioner management,
+              scheduling/availability, and data synchronization between legacy systems and the EHR.
             </li>
             <li>
-              Developed Temporal workflows to handle complex integrations with
-              the new EHR system.
+              Implemented <strong>Temporal workflows</strong> to manage complex interactions with 3rd-party EHR such as
+              appointment booking, patient creation, and on-demand routing. Workflows were often hooked into Kafka
+              events to trigger as a result of new messages on the queue. Additionally, leveraged the <strong>actor
+                pattern</strong> for durable execution and visibility into on-demand routing logic.
             </li>
             <li>
-              Implemented RPC endpoints for internal service-to-service
-              communication, including modules for Appointments, Shift
-              Management, and Practitioner Management.
+              Implemented <strong>gRPC endpoints</strong> for appointment booking, practitioner scheduling/availability,
+              and data synchronization, enabling efficient and scalable inter-service communication.
             </li>
             <li>
-              Created monitoring tools, including metrics and dashboards, to
-              ensure system performance and reliability.
+              Debugged and resolved a critical routing issue where status was being overwritten, enabling stable call
+              routing in preparation for our <strong>production launch</strong>.
+            </li>
+            <li>
+              Monitored and analyzed <strong>endpoint latency</strong> using <strong>Prometheus</strong> and
+              <strong>Grafana</strong>, ensuring acceptable performance while scaling practitioner availability systems
+              from 200 to 1,500 providers.
+            </li>
+            <li>
+              Collaborated with another team to assess scheduling endpoint performance, proposing and validating
+              fallback strategies for scalability.
+            </li>
+            <li>
+              Identified and resolved a critical <strong>department ID mismatch</strong> during on-call duties,
+              unblocking practitioners and maintaining provider trust through direct follow-up.
+            </li>
+            <li>
+              Migrated multiple backend services to <strong>Fx</strong>, simplifying dependency injection and improving
+              system maintainability.
+            </li>
+            <li>
+              Wrote <strong>acceptance tests</strong> for practitioner availability functionality, ensuring reliable and
+              consistent operations.
+            </li>
+            <li>
+              Used an in-house test harness to establish groundwork for on-demand routing acceptance tests, enabling
+              future readiness despite current infrastructure limitations.
+            </li>
+            <li>
+              Ensured high-quality unit testing, achieving an <strong>80% test coverage threshold</strong> for key
+              services. Used <strong>Mockery</strong> to create mocks when writing unit tests, ensuring robust and
+              isolated testing of individual components.
+            </li>
+            <li>
+              Maintained system health with <strong>OpsLevel</strong>, <strong>Dependabot</strong>, and
+              <strong>Rollbar</strong>, reducing <strong>MTTR</strong> for critical production issues.
             </li>
           </ul>
           <p class="entry-subtitle">🚀 Clinical Engineering Team</p>
           <p>
-            Over the past six years, I’ve played an integral part in enhancing
-            provider experience and patient outcomes by collaborating closely
-            with product designers and fellow engineers on the Clinical
-            engineering team. Together, we’ve crafted top-tier tools using
-            Python, Django, and Django Rest Framework to empower providers in
-            delivering optimal care. Examples include:
+            Contributed to transforming clinical workflows and enhancing the provider and patient experience through
+            innovative tools and efficient backend systems. Over six years, collaborated with cross-functional teams to
+            deliver solutions that supported high-quality care delivery.
           </p>
           <ul>
             <li>
-              Integrating Humana Member Health Summaries into our system for
-              Humana Members prior to each appointment using Python requests
-              library and Celery
-            </li>
-            <li>Upgrading most of our emails from SendGrid to ExactTarget</li>
-            <li>
-              Autocoding member medications and allergies using Python and
-              Celery tasks
+              Built and maintained tools using <strong>Python, Django</strong>, and <strong>Django Rest
+                Framework</strong>, enabling providers to access and manage patient information efficiently.
             </li>
             <li>
-              Serializing a snapshot of member clinical data to the database
-              on each chart sign using Django Rest Framework serializers
+              Developed automation workflows with <strong>Celery</strong>, including <strong>member health
+                summaries</strong> integration for patient preparation and <strong>autocoding medications and
+                allergies</strong>, significantly reducing manual overhead and ensuring data accuracy.
             </li>
             <li>
-              Fullstack implementation of Provider Payment Report Generation
-              tool that allowed us to pay providers more reliably using
-              Python/Django, HTML/CSS, Javascript, S3 Storage
+              Upgraded email communication systems from <strong>SendGrid</strong> to <strong>ExactTarget</strong>,
+              improving reliability and scalability.
             </li>
             <li>
-              Numerous updates to Lab Order handling (partial reports,
-              autorelease)
+              Serialized <strong>clinical data snapshots</strong> into the database during chart sign-off, ensuring
+              reliable and accurate historical record-keeping.
+            </li>
+            <li>
+              Designed and implemented a full-stack <strong>Provider Payment Report Generation tool</strong> with
+              <strong>Python/Django, HTML/CSS, JavaScript</strong>, and <strong>S3 Storage</strong>, automating
+              financial reporting for providers.
+            </li>
+            <li>
+              Led and contributed to the <strong>Chart Access</strong> project, enhancing provider accessibility to
+              patient charts and supporting seamless care delivery:
+              <ul>
+                <li><strong>Phase 1</strong>: Enabled provider access to patient charts regardless of appointment
+                  status, improving care continuity during emergencies, absences, or transitions.</li>
+                <li><strong>Phase 2</strong>: Expanded Chart Access to care coordinators, improving their ability to
+                  assist providers and manage patient cases.</li>
+                <li><strong>Phase 3</strong>: Scoped and planned the <strong>Unified Encounter Service</strong>,
+                  creating a foundation to unify legacy and video visit encounters under a single system with unique
+                  identifiers for all past and future visits.</li>
+                <li><strong>Phase 4</strong>: Unimplemented, but the planned and scoped the association of all past and
+                  future <strong>Lab Orders, Radiology</strong>, and <strong>Prescriptions</strong> with the Unified
+                  Encounter, eliminating redundant references in the database and ensuring seamless integration across
+                  systems.</li>
+              </ul>
+            </li>
+            <li>
+              Played a key role in reviving the <strong>Panel Management</strong> project, resolving critical
+              performance issues:
+              <ul>
+                <li>Optimized backend filtering and data aggregation to enable care coordinators and providers to
+                  efficiently manage patient populations based on customizable criteria.</li>
+                <li>Salvaged the project’s initial strategy and implemented solutions to ensure a successful release.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Enhanced <strong>Lab Order handling</strong> in alignment with <strong>CURES Act</strong> compliance,
+              ensuring timely and automated release of lab reports:
+              <ul>
+                <li>Identified and resolved critical issues with lab report statuses, improving the accuracy of
+                  auto-release processes and ensuring compliance with federal requirements.</li>
+                <li>Collaborated with engineers to troubleshoot and optimize workflows, supporting providers with
+                  accurate and timely patient lab results.</li>
+              </ul>
+            </li>
+            <li>
+              Supported junior engineers by providing guidance and sharing knowledge to foster their professional
+              growth.
             </li>
           </ul>
-          <p class="entry-subtitle">💡 System Stability & Mentorship</p>
-          <p>
-            Assist in ensuring system stability by working on-call rotations,
-            actively contributing to bug fixes and consistently delivering
-            high-quality, well-tested, Python and Go code.
-          </p>
         </div>
         <div class="entry">
           <h3>
@@ -406,6 +469,15 @@
             <h3>Tools & Technologies</h3>
             <ul>
               <li>Temporal</li>
+              <li>gRPC</li>
+              <li>Kafka</li>
+              <li>Prometheus</li>
+              <li>Grafana</li>
+              <li>OpsLevel</li>
+              <li>Dependabot</li>
+              <li>Rollbar</li>
+              <li>Mockery</li>
+              <li>Postman</li>
               <li>Celery</li>
               <li>Postgresql</li>
               <li>Git</li>
