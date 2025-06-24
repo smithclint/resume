@@ -1,8 +1,13 @@
-
-
 body {
-  font-family: "Deja Vu Sans", "Nanum Gothic", "HanaA", "HanaB", "Noto Sans",
-    "TH Sarabun New", "Unifont", sans-serif;
+  /* Option 1: Open Sans (clean, widely used, professional) */
+  font-family: "Open Sans", sans-serif;
+  
+  /* Option 2: Lato (friendly, humanist, readable) */
+  /* font-family: "Lato", sans-serif; */
+  
+  /* Option 3: Inter (modern, designed for UI) */
+  /* font-family: "Inter", sans-serif; */
+  
   margin: 0;
   padding: 0;
   color: #333;
@@ -50,7 +55,12 @@ header .details {
 .logo {
   max-width: 100%; /* Ensures the logo scales responsively */
   height: auto; /* Maintains aspect ratio */
-  max-height: 150px; /* Optional: Limits the logo height */
+  max-height: 150px; /* Restored original size limit for index and resume pages */
+}
+
+/* Large logo specifically for drone page */
+.logo.drone-logo {
+  max-height: none; /* Remove height restriction for drone page */
 }
 
 header h1 {
@@ -124,8 +134,91 @@ a:hover {
 }
 
 .professional-summary-paragraph {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
+
+/* Responsive video embeds */
+.video-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Maintains aspect ratio, no cropping */
+  background: #000; /* Black background for letterboxing if needed */
+}
+
+/* Portrait/vertical video styling for Instagram-style content */
+.video-container.portrait {
+  padding-bottom: 177.78%; /* 9:16 aspect ratio for vertical videos */
+  max-width: 350px; /* Slightly wider to accommodate content */
+  margin: 0 auto; /* Center the container */
+}
+
+.video-container.portrait video {
+  object-fit: contain; /* Changed from cover to contain to show full video */
+}
+
+.video-title {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Navigation styling */
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  margin: 0 20px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.nav-link.active {
+  background: #007bff;
+  color: white;
+  font-weight: 600;
+}
+
+.nav-link.active:hover {
+  background: #0056b3;
+}
+
+/* End navigation styling */
 
 @media (max-width: 768px) {
   .header-content {
@@ -139,14 +232,23 @@ a:hover {
   }
 
   .logo {
-    width: 120px; /* Adjust the size for smaller screens */
+    width: 120px; /* Original mobile size for index and resume pages */
     height: auto; /* Maintain aspect ratio */
     fill: #fdfdfa; /* Ensure the color remains correct */
+  }
+  
+  .logo.drone-logo {
+    width: 280px; /* Larger size for drone page mobile */
   }
 
   .headshot img {
     max-width: 70%; /* Adjust image size */
     margin-top: 1rem; /* Add spacing above the headshot */
+  }
+
+  .video-showcase {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
