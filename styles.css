@@ -1,13 +1,13 @@
 body {
   /* Option 1: Open Sans (clean, widely used, professional) */
   font-family: "Open Sans", sans-serif;
-  
+
   /* Option 2: Lato (friendly, humanist, readable) */
   /* font-family: "Lato", sans-serif; */
-  
+
   /* Option 3: Inter (modern, designed for UI) */
   /* font-family: "Inter", sans-serif; */
-  
+
   margin: 0;
   padding: 0;
   color: #333;
@@ -36,13 +36,13 @@ header .headshot {
   flex: 1;
 }
 header .headshot img {
-    width: 100%;         /* Makes the image responsive */
-    aspect-ratio: 1 / 1; /* Locks to a square aspect ratio (1:1) */
-    object-fit: cover;   /* Ensures the image fills the area */
-    border-radius: 1%;  /* Optional: Makes it circular */
-    border-color: white;
-    border: 0.5rem solid;
-    border-bottom: 1rem solid;
+  width: 100%; /* Makes the image responsive */
+  aspect-ratio: 1 / 1; /* Locks to a square aspect ratio (1:1) */
+  object-fit: cover; /* Ensures the image fills the area */
+  border-radius: 1%; /* Optional: Makes it circular */
+  border-color: white;
+  border: 0.5rem solid;
+  border-bottom: 1rem solid;
 }
 header .details {
   flex: 2;
@@ -200,7 +200,9 @@ a:hover {
   margin: 0 20px;
   padding: 8px 16px;
   border-radius: 4px;
-  transition: background 0.3s, color 0.3s;
+  transition:
+    background 0.3s,
+    color 0.3s;
   display: inline-block;
 }
 
@@ -236,7 +238,7 @@ a:hover {
     height: auto; /* Maintain aspect ratio */
     fill: #fdfdfa; /* Ensure the color remains correct */
   }
-  
+
   .logo.drone-logo {
     width: 280px; /* Larger size for drone page mobile */
   }
@@ -251,8 +253,6 @@ a:hover {
     gap: 1.5rem;
   }
 }
-
-
 
 @media (max-width: 480px) {
   .headshot img {
