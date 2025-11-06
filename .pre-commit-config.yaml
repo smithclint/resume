@@ -27,9 +27,3 @@ repos:
       - id: djlint
         files: \.(html)$
         args: ["--ignore=H006,H013,H021,H023,H030,H031"]
-
-  - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.31.0
-    hooks:
-      - id: commitizen
-        stages: [commit-msg]
